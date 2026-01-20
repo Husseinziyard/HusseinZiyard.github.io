@@ -2,154 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hussein Ziyard's Portfolio</title>
-  <meta name="description" content="Modern animated portfolio for data science roles. Projects, skills, experience, and contact." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hussein Ziyard | Portfolio</title>
+  <meta name="description" content="Hussein Ziyard — Applied Data Science & Communication Undergraduate. Portfolio, projects, and contact." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <div class="bg-orb orb-1" aria-hidden="true"></div>
-  <div class="bg-orb orb-2" aria-hidden="true"></div>
-  <div class="noise" aria-hidden="true"></div>
-
-  <header class="topbar">
-    <a class="brand" href="#home">
-      <span class="dot" aria-hidden="true"></span>
-      <span>HZ</span>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Go to top">
+      <span class="brand-mark">HZ</span>
     </a>
 
     <nav class="nav">
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
       <a href="#about">About</a>
-      <a class="btn btn-small" href="#contact">Contact</a>
+      <a href="#projects">Projects</a>
+      <a class="pill" href="#contact">Contact</a>
     </nav>
-
-    <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
   </header>
 
-  <aside class="mobile-menu" aria-hidden="true">
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#about">About</a>
-    <a href="#contact" class="btn">Contact</a>
-  </aside>
-
-  <main id="home" class="container">
+  <main id="top">
     <!-- HERO -->
-    <section class="hero section">
+    <section class="hero">
       <div class="hero-left">
-        <p class="pill">Open to: Data Analyst • Data Scientist • Database / Data Engineering Intern</p>
-
-        <h1 class="title">
-          Hi, I’m <span class="grad">Hussein Ziyard</span>.<br/>
-          I build data-driven solutions that turn messy data into clear decisions.
-        </h1>
-
+        <p class="kicker">Hussein Ziyard</p>
+        <h1>Data Science &amp; Analytics</h1>
         <p class="subtitle">
-          BSc Applied Data Science & Communication (Reading) • KDU • Colombo, Sri Lanka.</br>
-          Interested in analytics, machine learning, and practical AI systems.
+          I build data-driven solutions — from cleaning and analysis to ML models and dashboards —
+          with clear storytelling and practical outcomes.
         </p>
 
-        <div class="hero-cta">
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn btn-ghost" href="#contact">Let’s Connect</a>
+        <div class="chips" aria-label="Interests">
+          <span class="chip">📊 Data Analysis</span>
+          <span class="chip">🤖 Machine Learning</span>
+          <span class="chip">🧠 Research</span>
+          <span class="chip">🏀 Coaching</span>
         </div>
 
-        <div class="hero-metrics">
-          <div class="metric">
-            <div class="metric-num" data-count="12">0</div>
-            <div class="metric-label">Projects built</div>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/husseinziyard/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/Husseinziyard" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:husseinziyard@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Hussein,%0A%0AI%20visited%20your%20portfolio%20and%20would%20like%20to%20connect." title="Send me an email">Email</a>
+        </div>
+
+        <!-- MINI TERMINAL (optional, looks cool like your sample) -->
+        <div class="mini-terminal" role="region" aria-label="Project pipeline output">
+          <div class="terminal-top">
+            <span class="t-dot red"></span>
+            <span class="t-dot yellow"></span>
+            <span class="t-dot green"></span>
+            <span class="t-title">project_pipeline.py</span>
           </div>
-          <div class="metric">
-            <div class="metric-num" data-count="6">0</div>
-            <div class="metric-label">Certifications</div>
-          </div>
-          <div class="metric">
-            <div class="metric-num" data-count="3">0</div>
-            <div class="metric-label">Experience</div>
-          </div>
+          <pre class="terminal-body"><code>
+$ python project_pipeline.py
+📂 Loaded dataset: portfolio_projects.json
+🧹 Cleaned & validated fields
+📊 Generated project cards + tags
+✅ Deployed to GitHub Pages
+          </code></pre>
         </div>
       </div>
 
       <div class="hero-right">
-        <div class="card glass tilt" data-tilt>
-          <div class="card-header">
-            <div class="avatar">
-              <span>HZ</span>
+        <div class="hero-card">
+          <h2>Quick stats</h2>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <div class="metric-num" data-count="4">0</div>
+              <div class="metric-label">Projects</div>
             </div>
-            <div>
-              <div class="card-name">Hussein Ziyard</div>
-              <div class="card-role">Data Science • Analytics</div>
+            <div class="metric">
+              <div class="metric-num" data-count="6">0</div>
+              <div class="metric-label">Core tools</div>
+            </div>
+            <div class="metric">
+              <div class="metric-num" data-count="3">0</div>
+              <div class="metric-label">Focus areas</div>
             </div>
           </div>
 
-          <div class="card-body">
-            <div class="chip-row">
-              <span class="chip">Python</span>
-              <span class="chip">SQL</span>
-              <span class="chip">Pandas</span>
-              <span class="chip">Power BI</span>
-              <span class="chip">Scikit-learn</span>
-              <span class="chip">Git</span>
-            </div>
+          <p class="note">
+            Update these numbers anytime in <code>index.html</code> using <code>data-count</code>.
+          </p>
+        </div>
+      </div>
+    </section>
 
-            <div class="mini-terminal">
-              <div class="terminal-top">
-                <span class="t-dot red"></span>
-                <span class="t-dot yellow"></span>
-                <span class="t-dot green"></span>
-                <span class="t-title">model_training.py</span>
-              </div>
-              <pre class="terminal-body"><code>
-$ python model_training.py
-✅ Loaded dataset: 54,812 rows
-🧹 Cleaned missing values + outliers
-📈 Trained model: F1 = 0.86
-🧠 Exported pipeline + report
-              </code></pre>
-            </div>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p class="section-text">
+        I’m an Applied Data Science & Communication undergraduate. I enjoy working with real datasets,
+        building models, and presenting insights clearly. I also coach basketball, which sharpened my
+        leadership and teamwork skills.
+      </p>
 
-            <div class="links">
-  <a 
-    href="https://www.linkedin.com/in/husseinziyard/" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    title="Visit my LinkedIn profile">
-    LinkedIn
-  </a>
-
-  <a 
-    href="https://github.com/Husseinziyard" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    title="Visit my GitHub profile">
-    GitHub
-  </a>
-
-  <a 
-    href="mailto:husseinziyard@gmail.com" 
-    title="Send me an email">
-    Email
-  </a>
-</div>
-
-          </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Core tools</h3>
+          <ul class="list">
+            <li>Python (pandas, scikit-learn)</li>
+            <li>SQL</li>
+            <li>Power BI / Tableau (optional)</li>
+            <li>Git & GitHub</li>
+            <li>HTML/CSS (for dashboards/portfolios)</li>
+            <li>R (optional)</li>
+          </ul>
         </div>
 
-        <div class="floating-tags" aria-hidden="true">
-          <span class="tag">EDA</span>
-          <span class="tag">Dashboards</span>
-          <span class="tag">ML Pipelines</span>
-          <span class="tag">Storytelling</span>
+        <div class="card">
+          <h3>Focus areas</h3>
+          <ul class="list">
+            <li>Data cleaning & EDA</li>
+            <li>Classification & prediction</li>
+            <li>Dashboards & reporting</li>
+            <li>Research-based projects</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -157,245 +126,108 @@ $ python model_training.py
     <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="section-head">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-sub">Placeholders for now — we’ll replace with your real projects later.</p>
+        <h2>Projects</h2>
+        <p class="muted">Case-study style cards (swap titles, tags, and links).</p>
       </div>
 
-      <div class="grid projects">
-        <article class="project glass reveal">
-          <div class="project-top">
-            <h3>Road Accident Risk Analytics</h3>
-            <p class="muted">Predict severity and identify rule-violation patterns using ML.</p>
+      <div class="projects">
+        <!-- Project 1 -->
+        <article class="project">
+          <div class="project-media" aria-hidden="true">
+            <span class="project-badge">Case Study</span>
           </div>
-          <ul class="bullets">
-            <li>Built a classification pipeline (cleaning → features → model)</li>
-            <li>Created explainable insights for high-risk behaviors</li>
-            <li>Produced a final report + charts for decision-making</li>
-          </ul>
-          <div class="stack">
-            <span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">Scikit-learn</span><span class="chip">Matplotlib</span>
-          </div>
-          <div class="actions">
-            <button class="btn btn-ghost open-modal" data-modal="m1">Details</button>
-            <a class="btn" href="#" title="Add GitHub link">GitHub</a>
+          <div class="project-body">
+            <h3>Road Accident Analysis (AI Research)</h3>
+            <p class="project-tags">EDA • Feature Engineering • Modeling • Reporting</p>
+            <p class="project-desc">
+              Analyzing accident patterns and rule adherence factors to support a predictive model
+              and actionable insights.
+            </p>
+            <div class="project-links">
+              <a href="#" aria-label="Add your project link">View</a>
+              <a href="https://github.com/Husseinziyard" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
           </div>
         </article>
 
-        <article class="project glass reveal">
-          <div class="project-top">
-            <h3>Online Retail Market Basket Mining</h3>
-            <p class="muted">Association Rule Mining to discover product bundles and cross-sell ideas.</p>
+        <!-- Project 2 -->
+        <article class="project">
+          <div class="project-media" aria-hidden="true">
+            <span class="project-badge">Dashboard</span>
           </div>
-          <ul class="bullets">
-            <li>Cleaned transactional dataset and engineered baskets</li>
-            <li>Generated association rules (support/confidence/lift)</li>
-            <li>Converted patterns into business recommendations</li>
-          </ul>
-          <div class="stack">
-            <span class="chip">R</span><span class="chip">arules</span><span class="chip">Data Cleaning</span>
-          </div>
-          <div class="actions">
-            <button class="btn btn-ghost open-modal" data-modal="m2">Details</button>
-            <a class="btn" href="#" title="Add GitHub link">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project glass reveal">
-          <div class="project-top">
-            <h3>Restaurant Review Sentiment Model</h3>
-            <p class="muted">Neural network-based text classification with evaluation metrics.</p>
-          </div>
-          <ul class="bullets">
-            <li>Tokenized and vectorized review text</li>
-            <li>Trained a NN model and tuned hyperparameters</li>
-            <li>Reported accuracy + confusion matrix</li>
-          </ul>
-          <div class="stack">
-            <span class="chip">Python</span><span class="chip">NLP</span><span class="chip">TensorFlow</span>
-          </div>
-          <div class="actions">
-            <button class="btn btn-ghost open-modal" data-modal="m3">Details</button>
-            <a class="btn" href="#" title="Add GitHub link">GitHub</a>
+          <div class="project-body">
+            <h3>Online Retail Association Rules (R)</h3>
+            <p class="project-tags">Apriori • Rules • Visualization • Insights</p>
+            <p class="project-desc">
+              Market-basket analysis using association rule mining to surface purchase patterns.
+            </p>
+            <div class="project-links">
+              <a href="#" aria-label="Add your report link">Report</a>
+              <a href="#" aria-label="Add your code link">Code</a>
+            </div>
           </div>
         </article>
 
-        <article class="project glass reveal">
-          <div class="project-top">
-            <h3>Sales Dashboard + KPI Story</h3>
-            <p class="muted">Interactive dashboard for trends, segments, and performance tracking.</p>
+        <!-- Project 3 -->
+        <article class="project">
+          <div class="project-media" aria-hidden="true">
+            <span class="project-badge">ML</span>
           </div>
-          <ul class="bullets">
-            <li>Designed KPI board: revenue, growth, conversion</li>
-            <li>Built drill-down charts for category/region</li>
-            <li>Wrote insights as executive summary</li>
-          </ul>
-          <div class="stack">
-            <span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">SQL</span>
-          </div>
-          <div class="actions">
-            <button class="btn btn-ghost open-modal" data-modal="m4">Details</button>
-            <a class="btn" href="#" title="Add link">Report</a>
+          <div class="project-body">
+            <h3>Stock Change Prediction (IEEE-style)</h3>
+            <p class="project-tags">Time Series • Features • Evaluation</p>
+            <p class="project-desc">
+              A predictive modeling workflow with careful validation, metrics, and a research write-up.
+            </p>
+            <div class="project-links">
+              <a href="#" aria-label="Add your paper link">Paper</a>
+              <a href="#" aria-label="Add your repo link">Code</a>
+            </div>
           </div>
         </article>
-      </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="section-head">
-        <h2 class="section-title">Skills</h2>
-        <p class="section-sub">Tools that help me ship real results.</p>
-      </div>
-
-      <div class="grid skills">
-        <div class="glass reveal skill-card">
-          <h3>Programming</h3>
-          <p class="muted">Python • R • SQL</p>
-        </div>
-        <div class="glass reveal skill-card">
-          <h3>Data Science</h3>
-          <p class="muted">Pandas • NumPy • Scikit-learn</p>
-        </div>
-        <div class="glass reveal skill-card">
-          <h3>Visualization</h3>
-          <p class="muted">Matplotlib • Seaborn • Power BI</p>
-        </div>
-        <div class="glass reveal skill-card">
-          <h3>Databases</h3>
-          <p class="muted">MySQL • MongoDB • Modeling</p>
-        </div>
-        <div class="glass reveal skill-card">
-          <h3>Workflow</h3>
-          <p class="muted">Git/GitHub • Notebooks • Reporting</p>
-        </div>
-        <div class="glass reveal skill-card">
-          <h3>Soft Skills</h3>
-          <p class="muted">Leadership • Communication • Coaching</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <div class="section-head">
-        <h2 class="section-title">Experience & Leadership</h2>
-        <p class="section-sub">Proof that I can lead, deliver, and collaborate.</p>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item glass reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Assistant Basketball Coach — Zahira College Colombo</h3>
-            <p class="muted">Coaching, planning sessions, performance mindset, discipline, teamwork.</p>
+        <!-- Project 4 -->
+        <article class="project">
+          <div class="project-media" aria-hidden="true">
+            <span class="project-badge">Web</span>
           </div>
-        </div>
-
-        <div class="timeline-item glass reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>AI & Data Science Club — Event Organizer</h3>
-            <p class="muted">Organized Data Odyssey / DataInspire-style events, coordination and execution.</p>
+          <div class="project-body">
+            <h3>Portfolio Website (GitHub Pages)</h3>
+            <p class="project-tags">HTML • CSS • JS • Deployment</p>
+            <p class="project-desc">
+              A clean portfolio template inspired by modern case-study layouts.
+            </p>
+            <div class="project-links">
+              <a href="https://husseinziyard.github.io" target="_blank" rel="noopener noreferrer">Live</a>
+              <a href="https://github.com/Husseinziyard" target="_blank" rel="noopener noreferrer">Repo</a>
+            </div>
           </div>
-        </div>
-
-        <div class="timeline-item glass reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <h3>Academic Focus</h3>
-            <p class="muted">Analytics, ML, data storytelling, and building practical projects.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <div class="section-head">
-        <h2 class="section-title">About</h2>
-      </div>
-
-      <div class="about grid">
-        <div class="glass reveal">
-          <h3>What I’m good at</h3>
-          <p class="muted">
-            I enjoy taking raw datasets, cleaning them, exploring patterns, and building models or dashboards
-            that help people make better decisions.
-          </p>
-        </div>
-        <div class="glass reveal">
-          <h3>What I’m looking for</h3>
-          <p class="muted">
-            Internship / entry-level opportunities in data analytics, data science, or database/data engineering roles
-            where I can learn fast and ship real outcomes.
-          </p>
-        </div>
+        </article>
       </div>
     </section>
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <div class="section-head">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-sub">Replace the links with your real details.</p>
-      </div>
-
-      <div class="contact grid">
-        <div class="glass reveal">
-          <h3>Let’s talk</h3>
-          <p class="muted">Email me or connect on LinkedIn. I reply fast.</p>
-
-          <div class="links">
-  <a 
-    href="https://www.linkedin.com/in/husseinziyard/" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    title="Visit my LinkedIn profile">
-    LinkedIn
-  </a>
-
-  <a 
-    href="https://github.com/Husseinziyard" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    title="Visit my GitHub profile">
-    GitHub
-  </a>
-
-  <a 
-    href="mailto:husseinziyard@gmail.com" 
-    title="Send me an email">
-    Email
-  </a>
-</div>
-
-          <p class="tiny muted">Tip: Replace placeholders: YOUR_EMAIL_HERE, YOUR_LINKEDIN_HERE, YOUR_GITHUB_HERE</p>
-        </div>
-
-        <div class="glass reveal">
-          <h3>Quick CV line</h3>
-          <p class="muted">
-            BSc Applied Data Science & Communication (Reading) • KDU •
-            Python, SQL, Power BI • Machine Learning & Analytics
-          </p>
-          <button class="btn btn-ghost" id="copyLine">Copy</button>
-          <p class="tiny muted" id="copyStatus"></p>
+      <div class="contact-card">
+        <h2>Have a project in mind?</h2>
+        <p class="section-text">
+          If you’d like to collaborate, discuss an internship, or review a project idea, email me and I’ll respond.
+        </p>
+        <div class="contact-actions">
+          <a class="btn" href="mailto:husseinziyard@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Hussein,%0A%0AI%20would%20like%20to%20connect%20about...">
+            Get in touch
+          </a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/husseinziyard/" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
         </div>
       </div>
     </section>
-
-    <footer class="footer">
-      <p class="muted">© <span id="year"></span> Hussein Ziyard • Built with GitHub Pages</p>
-    </footer>
   </main>
 
-  <!-- MODALS -->
-  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
-    <div class="modal glass" role="dialog" aria-modal="true" aria-label="Project details">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-      <div id="modalContent"></div>
-    </div>
-  </div>
+  <footer class="footer">
+    <p>© <span id="year"></span> Hussein Ziyard</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
