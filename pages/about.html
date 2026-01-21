@@ -1,1 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Hussein Ziyard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: #1a1a1a;
+        background-color: #fafafa;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #fff;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      header a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      header a:hover {
+        color: #0066cc;
+      }
+
+      .page-hero {
+        padding: 4rem 0 2rem;
+      }
+
+      .page-hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #1a1a1a;
+      }
+
+      .about-section {
+        background: #fff;
+        border-radius: 12px;
+        padding: 3rem;
+        margin-bottom: 2rem;
+        border: 1px solid #e5e5e5;
+      }
+
+      .about-section h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: #1a1a1a;
+      }
+
+      .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #4a4a4a;
+        margin-bottom: 1.5rem;
+      }
+
+      .profile-image-section {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .profile-image-section img {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #fff;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .value-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 2rem;
+        border-radius: 12px;
+        transition: transform 0.3s ease;
+      }
+
+      .value-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .value-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .value-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: rgba(255,255,255,0.9);
+      }
+
+      .interests-section {
+        background: #fff;
+        border-radius: 12px;
+        padding: 3rem;
+        border: 1px solid #e5e5e5;
+      }
+
+      .interest-item {
+        display: flex;
+        align-items: start;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+      }
+
+      .interest-item:hover {
+        background: #e9ecef;
+      }
+
+      .interest-icon {
+        font-size: 2rem;
+        margin-right: 1.5rem;
+        min-width: 50px;
+      }
+
+      .interest-content h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #1a1a1a;
+      }
+
+      .interest-content p {
+        font-size: 1rem;
+        color: #4a4a4a;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      footer {
+        border-top: 1px solid #e5e5e5;
+        background-color: #fff;
+        margin-top: 5rem;
+      }
+
+      footer h6 {
+        color: #666;
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+
+      footer a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #0066cc;
+      }
+
+      @media (max-width: 768px) {
+        .page-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .about-section, .interests-section {
+          padding: 1.5rem;
+        }
+
+        .profile-image-section img {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container px-2 px-md-0">
+        <div class="d-flex justify-content-between align-items-center py-2 py-md-3">
+          <a href="../index.html"><h6 class="fw-bold mb-0">HZ</h6></a>
+          <div class="d-flex gap-4">
+            <a href="education.html">Education</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container px-2 px-md-0">
+      <section class="page-hero">
+        <h1 data-aos="fade-up" data-aos-duration="700">About Me</h1>
+      </section>
+
+      <div class="profile-image-section" data-aos="fade-up" data-aos-duration="700">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop" alt="Hussein Ziyard" />
+      </div>
+
+      <div class="about-section" data-aos="fade-up" data-aos-duration="700">
+        <h2>Who I Am</h2>
+        <p>
+          I'm Hussein Ziyard, a data science student at General Sir John Kotelawala Defence University 
+          with a passion for turning raw data into meaningful insights. My journey combines the analytical 
+          rigor of data science with the dynamic energy of basketball coaching, creating a unique perspective 
+          on problem-solving and team dynamics.
+        </p>
+        <p>
+          What drives me is the thrill of prediction and pattern recognition. Whether I'm building machine 
+          learning models to forecast trends or analyzing player performance on the basketball court, I find 
+          joy in uncovering hidden insights that others might miss. This predictive mindset shapes everything 
+          I do, from academic projects to coaching strategies.
+        </p>
+        <p>
+          As someone who thrives in team environments, I understand that the best outcomes emerge from 
+          collaboration. My experience as an assistant basketball coach has taught me the value of clear 
+          communication, strategic planning, and collective effort. These same principles guide my approach 
+          to data science projects, where collaboration and diverse perspectives lead to innovative solutions.
+        </p>
+      </div>
+
+      <div class="about-section" data-aos="fade-up" data-aos-duration="700">
+        <h2>My Core Values</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <h3>🎯 Data-Driven Decision Making</h3>
+            <p>
+              I believe in letting data tell the story. Every decision should be backed by evidence, 
+              analysis, and careful interpretation of patterns and trends.
+            </p>
+          </div>
+          <div class="value-card">
+            <h3>🤝 Teamwork & Collaboration</h3>
+            <p>
+              Success is a team sport. Whether in the classroom, on the court, or in project teams, 
+              I value diverse perspectives and collaborative problem-solving.
+            </p>
+          </div>
+          <div class="value-card">
+            <h3>📈 Continuous Growth</h3>
+            <p>
+              Learning never stops. I'm constantly exploring new technologies, techniques, and 
+              methodologies to stay at the forefront of data science and coaching.
+            </p>
+          </div>
+          <div class="value-card">
+            <h3>💡 Innovation & Creativity</h3>
+            <p>
+              The intersection of sports and data science shows me that innovation happens when 
+              you combine different disciplines in unexpected ways.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="interests-section" data-aos="fade-up" data-aos-duration="700">
+        <h2 style="margin-bottom: 2rem;">What I'm Passionate About</h2>
+        
+        <div class="interest-item">
+          <div class="interest-icon">📊</div>
+          <div class="interest-content">
+            <h4>Data Science & Analytics</h4>
+            <p>
+              From sustainable development goals to healthcare outcomes, I love exploring datasets 
+              that have real-world impact. My projects span environmental analysis, public health, 
+              and economic modeling, always with the goal of extracting actionable insights.
+            </p>
+          </div>
+        </div>
+
+        <div class="interest-item">
+          <div class="interest-icon">🏀</div>
+          <div class="interest-content">
+            <h4>Sports & Athletics</h4>
+            <p>
+              Basketball isn't just a game to me—it's a laboratory for testing leadership, strategy, 
+              and teamwork. As a certified coach and player, I apply analytical thinking to 
+              performance optimization and player development.
+            </p>
+          </div>
+        </div>
+
+        <div class="interest-item">
+          <div class="interest-icon">🔮</div>
+          <div class="interest-content">
+            <h4>Predictive Modeling</h4>
+            <p>
+              There's something magical about building models that can forecast future outcomes. 
+              Whether it's predicting EV adoption trends or patient health outcomes, I'm fascinated 
+              by the challenge of turning historical data into future insights.
+            </p>
+          </div>
+        </div>
+
+        <div class="interest-item">
+          <div class="interest-icon">👨‍🏫</div>
+          <div class="interest-content">
+            <h4>Education & Mentorship</h4>
+            <p>
+              Teaching mathematics and ICT to students allows me to share my passion for analytical 
+              thinking. I believe in making complex concepts accessible and helping others discover 
+              their potential through education.
+            </p>
+          </div>
+        </div>
+
+        <div class="interest-item">
+          <div class="interest-icon">🌍</div>
+          <div class="interest-content">
+            <h4>Sustainable Development</h4>
+            <p>
+              Data science has the power to address global challenges. My work on sustainable 
+              development goals, energy performance, and environmental impact reflects my commitment 
+              to using technology for positive change.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-section" data-aos="fade-up" data-aos-duration="700">
+        <h2>Looking Forward</h2>
+        <p>
+          As I continue my journey in data science, I'm excited to explore the intersection of 
+          artificial intelligence, sports analytics, and sustainable development. My goal is to 
+          leverage data-driven insights to make meaningful contributions in both technology and 
+          education sectors.
+        </p>
+        <p>
+          I'm always open to collaboration, whether it's on data science projects, coaching 
+          opportunities, or educational initiatives. If you share similar interests or have 
+          exciting projects in mind, let's connect and create something impactful together.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container px-2 px-md-0">
+        <div class="d-md-flex justify-content-between align-items-center py-3">
+          <h6 class="text-center text-md-start">
+            Copyright © 2025 Hussein Ziyard
+          </h6>
+          <div class="d-flex flex-column flex-md-row gap-1 gap-md-4 justify-content-center align-items-center">
+            <a href="https://www.linkedin.com/in/husseinziyard/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Husseinziyard" target="_blank">GitHub</a>
+            <a href="https://preply.in/HUSSEIN6EN3301501010?ts=17689284" target="_blank">Preply</a>
+            <a href="mailto:husseinziyard@gmail.com">husseinziyard@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
