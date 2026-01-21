@@ -1,1 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Experience - Hussein Ziyard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: #1a1a1a;
+        background-color: #fafafa;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #fff;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      header a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      header a:hover {
+        color: #0066cc;
+      }
+
+      .page-hero {
+        padding: 4rem 0 2rem;
+      }
+
+      .page-hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #1a1a1a;
+      }
+
+      .page-hero p {
+        font-size: 1.2rem;
+        color: #666;
+        max-width: 700px;
+      }
+
+      .work-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+        border: 1px solid #e5e5e5;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .work-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+      }
+
+      .work-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      }
+
+      .work-card .status {
+        display: inline-block;
+        background: #10b981;
+        color: white;
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .work-card h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 0.5rem;
+      }
+
+      .work-card h3 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #0066cc;
+        margin-bottom: 0.5rem;
+      }
+
+      .work-card .duration {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .work-card .duration::before {
+        content: "📅";
+        font-size: 1rem;
+      }
+
+      .work-card p {
+        color: #4a4a4a;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+
+      .work-card ul {
+        margin-top: 1rem;
+        padding-left: 1.5rem;
+      }
+
+      .work-card ul li {
+        color: #4a4a4a;
+        margin-bottom: 0.8rem;
+        line-height: 1.6;
+      }
+
+      .skills-section {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #e5e5e5;
+      }
+
+      .skills-section h4 {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .badge-custom {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        display: inline-block;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      footer {
+        border-top: 1px solid #e5e5e5;
+        background-color: #fff;
+        margin-top: 5rem;
+      }
+
+      footer h6 {
+        color: #666;
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+
+      footer a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #0066cc;
+      }
+
+      @media (max-width: 768px) {
+        .page-hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .work-card {
+          padding: 1.5rem;
+        }
+
+        .work-card h2 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container px-2 px-md-0">
+        <div class="d-flex justify-content-between align-items-center py-2 py-md-3">
+          <a href="../index.html"><h6 class="fw-bold mb-0">HZ</h6></a>
+          <div class="d-flex gap-4">
+            <a href="education.html">Education</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container px-2 px-md-0">
+      <section class="page-hero">
+        <h1 data-aos="fade-up" data-aos-duration="700">Work Experience</h1>
+        <p data-aos="fade-up" data-aos-duration="900">
+          My professional journey in coaching, education, and mentorship
+        </p>
+      </section>
+
+      <section class="work-timeline">
+        <div class="work-card" data-aos="fade-up" data-aos-duration="700">
+          <span class="status">Current Position</span>
+          <h2>Assistant Basketball Coach</h2>
+          <h3>Zahira College Colombo</h3>
+          <div class="duration">June 2023 – Present</div>
+          <p>
+            Leading training programs and performance development for the school basketball team, 
+            focusing on skill development, tactical understanding, and team coordination. Applying 
+            data-driven approaches to analyze player performance and optimize training strategies.
+          </p>
+          <ul>
+            <li>Design and implement comprehensive training programs for student-athletes</li>
+            <li>Conduct performance analysis and provide individualized feedback to players</li>
+            <li>Coordinate team strategies and game planning for competitive matches</li>
+            <li>Mentor young athletes in both athletic and personal development</li>
+            <li>Organize practice sessions, drills, and conditioning programs</li>
+            <li>Track player statistics and progress using analytical methods</li>
+          </ul>
+          <div class="skills-section">
+            <h4>Key Skills Applied</h4>
+            <span class="badge-custom">Team Leadership</span>
+            <span class="badge-custom">Performance Analysis</span>
+            <span class="badge-custom">Youth Development</span>
+            <span class="badge-custom">Strategic Planning</span>
+            <span class="badge-custom">Communication</span>
+          </div>
+        </div>
+
+        <div class="work-card" data-aos="fade-up" data-aos-duration="700">
+          <span class="status">Current Position</span>
+          <h2>Private Tutor - O-Level Mathematics & ICT</h2>
+          <h3>Self-Employed</h3>
+          <div class="duration">June 2025 – Present</div>
+          <p>
+            Providing personalized tutoring services for O-Level students in Mathematics and Information 
+            & Communication Technology. Developing customized learning plans to help students achieve 
+            their academic goals and build strong foundations in analytical thinking.
+          </p>
+          <ul>
+            <li>Conduct one-on-one and group tutoring sessions for O-Level Mathematics and ICT</li>
+            <li>Create tailored lesson plans based on individual student needs and learning styles</li>
+            <li>Prepare students for examinations with targeted practice and review sessions</li>
+            <li>Utilize modern teaching methods and digital tools to enhance learning outcomes</li>
+            <li>Track student progress and provide regular feedback to parents</li>
+            <li>Develop problem-solving skills and critical thinking abilities in students</li>
+          </ul>
+          <div class="skills-section">
+            <h4>Key Skills Applied</h4>
+            <span class="badge-custom">Mathematics</span>
+            <span class="badge-custom">ICT</span>
+            <span class="badge-custom">Curriculum Development</span>
+            <span class="badge-custom">Student Assessment</span>
+            <span class="badge-custom">Educational Technology</span>
+          </div>
+        </div>
+
+        <div class="work-card" data-aos="fade-up" data-aos-duration="700">
+          <h2>Volunteer Mathematics Teacher</h2>
+          <h3>Al Hikma College</h3>
+          <div class="duration">March 2023 – August 2023</div>
+          <p>
+            Volunteered as a mathematics teacher, conducting lessons and academic support sessions 
+            for students. Focused on making mathematics accessible and engaging while building 
+            students' confidence in problem-solving.
+          </p>
+          <ul>
+            <li>Delivered structured mathematics lessons to secondary school students</li>
+            <li>Provided academic support and extra help sessions for struggling students</li>
+            <li>Developed interactive teaching materials and practice exercises</li>
+            <li>Encouraged analytical thinking and mathematical reasoning skills</li>
+            <li>Assisted students in exam preparation and concept reinforcement</li>
+            <li>Created a supportive learning environment to boost student confidence</li>
+          </ul>
+          <div class="skills-section">
+            <h4>Key Skills Applied</h4>
+            <span class="badge-custom">Teaching</span>
+            <span class="badge-custom">Mathematics</span>
+            <span class="badge-custom">Mentorship</span>
+            <span class="badge-custom">Lesson Planning</span>
+            <span class="badge-custom">Community Service</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="additional-info mt-5 p-4" style="background: #fff; border-radius: 12px; border: 1px solid #e5e5e5;" data-aos="fade-up" data-aos-duration="700">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Professional Philosophy</h2>
+        <p style="color: #4a4a4a; line-height: 1.8; margin-bottom: 1rem;">
+          My approach to coaching and teaching is rooted in the belief that every individual has unique potential. 
+          Whether on the basketball court or in the classroom, I strive to create environments where students and 
+          athletes can thrive through personalized guidance, data-driven insights, and genuine mentorship.
+        </p>
+        <p style="color: #4a4a4a; line-height: 1.8;">
+          I combine my technical knowledge in data science with practical experience in education to deliver 
+          measurable results. My work is characterized by attention to detail, strong communication, and a 
+          commitment to continuous improvement.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container px-2 px-md-0">
+        <div class="d-md-flex justify-content-between align-items-center py-3">
+          <h6 class="text-center text-md-start">
+            Copyright © 2025 Hussein Ziyard
+          </h6>
+          <div class="d-flex flex-column flex-md-row gap-1 gap-md-4 justify-content-center align-items-center">
+            <a href="https://www.linkedin.com/in/husseinziyard/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Husseinziyard" target="_blank">GitHub</a>
+            <a href="https://preply.in/HUSSEIN6EN3301501010?ts=17689284" target="_blank">Preply</a>
+            <a href="mailto:husseinziyard@gmail.com">husseinziyard@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
