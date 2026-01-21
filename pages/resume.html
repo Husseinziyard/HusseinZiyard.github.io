@@ -1,1 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Hussein Ziyard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        color: #1a1a1a;
+        background-color: #fafafa;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #fff;
+        border-bottom: 1px solid #e5e5e5;
+      }
+
+      header a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      header a:hover {
+        color: #0066cc;
+      }
+
+      .resume-container {
+        max-width: 900px;
+        margin: 3rem auto;
+        background: #fff;
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      }
+
+      .resume-header {
+        text-align: center;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid #e5e5e5;
+        margin-bottom: 2rem;
+      }
+
+      .resume-header h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #1a1a1a;
+      }
+
+      .resume-header .subtitle {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 1rem;
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .contact-info a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      .resume-section {
+        margin-bottom: 2.5rem;
+      }
+
+      .resume-section h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #0066cc;
+      }
+
+      .resume-item {
+        margin-bottom: 1.5rem;
+      }
+
+      .resume-item h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 0.3rem;
+      }
+
+      .resume-item .organization {
+        font-size: 1rem;
+        color: #0066cc;
+        margin-bottom: 0.2rem;
+      }
+
+      .resume-item .duration {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 0.8rem;
+      }
+
+      .resume-item p, .resume-item ul {
+        font-size: 0.95rem;
+        color: #4a4a4a;
+        line-height: 1.6;
+      }
+
+      .resume-item ul {
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .resume-item ul li {
+        margin-bottom: 0.3rem;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .skill-category h4 {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 0.5rem;
+      }
+
+      .skill-category p {
+        font-size: 0.9rem;
+        color: #4a4a4a;
+        line-height: 1.6;
+      }
+
+      .certifications-list {
+        display: grid;
+        gap: 0.8rem;
+      }
+
+      .cert-item {
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        border-left: 3px solid #0066cc;
+      }
+
+      .cert-item h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin: 0;
+      }
+
+      .download-btn {
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .btn-download {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.3s ease;
+      }
+
+      .btn-download:hover {
+        transform: translateY(-2px);
+        color: white;
+      }
+
+      footer {
+        border-top: 1px solid #e5e5e5;
+        background-color: #fff;
+        margin-top: 5rem;
+      }
+
+      footer h6 {
+        color: #666;
+        font-size: 0.9rem;
+        font-weight: 400;
+      }
+
+      footer a {
+        color: #1a1a1a;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #0066cc;
+      }
+
+      @media print {
+        header, footer, .download-btn {
+          display: none;
+        }
+        .resume-container {
+          box-shadow: none;
+          padding: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .resume-container {
+          padding: 1.5rem;
+        }
+
+        .resume-header h1 {
+          font-size: 2rem;
+        }
+
+        .contact-info {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container px-2 px-md-0">
+        <div class="d-flex justify-content-between align-items-center py-2 py-md-3">
+          <a href="../index.html"><h6 class="fw-bold mb-0">HZ</h6></a>
+          <div class="d-flex gap-4">
+            <a href="education.html">Education</a>
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="resume.html">Resume</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container px-2 px-md-0">
+      <div class="download-btn" data-aos="fade-up">
+        <button onclick="window.print()" class="btn-download">📄 Download as PDF</button>
+      </div>
+
+      <div class="resume-container" data-aos="fade-up" data-aos-duration="700">
+        <div class="resume-header">
+          <h1>Hussein Ziyard</h1>
+          <div class="subtitle">Data Science Student | Basketball Coach | Educator</div>
+          <div class="contact-info">
+            <span>📧 <a href="mailto:husseinziyard@gmail.com">husseinziyard@gmail.com</a></span>
+            <span>📱 +94 77 311 3683</span>
+            <span>💼 <a href="https://www.linkedin.com/in/husseinziyard/" target="_blank">linkedin.com/in/husseinziyard</a></span>
+            <span>💻 <a href="https://github.com/Husseinziyard" target="_blank">github.com/Husseinziyard</a></span>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Education</h2>
+          <div class="resume-item">
+            <h3>BSc Applied Data Science and Communication</h3>
+            <div class="organization">General Sir John Kotelawala Defence University</div>
+            <div class="duration">January 2024 – December 2026 (Expected)</div>
+            <p>Pursuing a comprehensive degree in applied data science with focus on statistical analysis, machine learning, and data communication.</p>
+          </div>
+
+          <div class="resume-item">
+            <h3>Basketball Coaching – Level 1</h3>
+            <div class="organization">National Institute of Sports Sciences (NISS)</div>
+            <div class="duration">November 2023 – December 2023</div>
+            <p>Certified in fundamental basketball coaching methodologies, player development, and sports psychology.</p>
+          </div>
+
+          <div class="resume-item">
+            <h3>G.C.E Advanced Level - Physical Science Stream</h3>
+            <div class="organization">Zahira College Colombo</div>
+            <div class="duration">February 2009 – January 2023</div>
+            <p>Completed A-Levels in Combined Mathematics, Physics, and ICT with strong academic performance.</p>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Professional Experience</h2>
+          <div class="resume-item">
+            <h3>Assistant Basketball Coach</h3>
+            <div class="organization">Zahira College Colombo</div>
+            <div class="duration">June 2023 – Present</div>
+            <ul>
+              <li>Design and implement comprehensive training programs for student-athletes</li>
+              <li>Conduct performance analysis and provide individualized player feedback</li>
+              <li>Coordinate team strategies and game planning for competitive matches</li>
+              <li>Mentor young athletes in both athletic and personal development</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h3>Private Tutor - O-Level Mathematics & ICT</h3>
+            <div class="organization">Self-Employed</div>
+            <div class="duration">June 2025 – Present</div>
+            <ul>
+              <li>Provide personalized tutoring for O-Level students in Mathematics and ICT</li>
+              <li>Develop customized learning plans based on individual student needs</li>
+              <li>Utilize modern teaching methods and digital tools to enhance learning outcomes</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h3>Volunteer Mathematics Teacher</h3>
+            <div class="organization">Al Hikma College</div>
+            <div class="duration">March 2023 – August 2023</div>
+            <ul>
+              <li>Delivered structured mathematics lessons to secondary school students</li>
+              <li>Provided academic support and extra help sessions for struggling students</li>
+              <li>Created interactive teaching materials and practice exercises</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Academic Projects</h2>
+          
+          <div class="resume-item">
+            <h3>A Data Analytics Approach to Sustainable Development</h3>
+            <p><strong>Technologies:</strong> SQL Server, Power BI</p>
+            <ul>
+              <li>Analyzed UN SDG datasets on poverty, health, and climate indicators (2000–2024)</li>
+              <li>Built normalized relational models and created interactive dashboards with KPIs</li>
+              <li>Enabled stakeholders to explore trends and track progress toward SDGs</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h3>UK Study and Work Visa Application Analysis</h3>
+            <p><strong>Technologies:</strong> SQL Server, Power BI</p>
+            <ul>
+              <li>Analyzed historical UK visa datasets (2010–2024) to identify trends and patterns</li>
+              <li>Created interactive dashboards for real-time tracking of sponsorship outcomes</li>
+              <li>Provided insights for policy and workforce planning</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h3>Global Model for Environmental Impact of EV Adoption</h3>
+            <p><strong>Technologies:</strong> Data Analysis, Modeling</p>
+            <ul>
+              <li>Developed global model quantifying environmental benefits of EV adoption</li>
+              <li>Projected CO2 savings of 1.95 tons per vehicle per year</li>
+              <li>Provided actionable insights for policymakers and manufacturers</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h3>Public Health Data Mining</h3>
+            <p><strong>Technologies:</strong> Python, Random Forest, K-Means, DBSCAN</p>
+            <ul>
+              <li>Applied classification and clustering techniques on public health data</li>
+              <li>Built Random Forest classifier to predict vulnerable regions</li>
+              <li>Used clustering algorithms for healthcare planning and resource allocation</li>
+            </ul>
+          </div>
+
+          <div class="resume-item">
+            <h3>Olympic Games Data Analysis</h3>
+            <p><strong>Technologies:</strong> Power BI, Data Visualization</p>
+            <ul>
+              <li>Analyzed Summer and Winter Olympic medal data for country-wise trends</li>
+              <li>Developed interactive dashboards to visualize historical performance</li>
+              <li>Identified patterns in participation and success metrics</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4>Programming Languages</h4>
+              <p>Python, R, SQL, T-SQL</p>
+            </div>
+            <div class="skill-category">
+              <h4>Data Science Libraries</h4>
+              <p>Pandas, NumPy, Matplotlib, Scikit-learn</p>
+            </div>
+            <div class="skill-category">
+              <h4>Data Engineering</h4>
+              <p>SQL Server, Azure SQL, ETL, Data Transformation</p>
+            </div>
+            <div class="skill-category">
+              <h4>Visualization & BI</h4>
+              <p>Power BI, DAX, Interactive Dashboards</p>
+            </div>
+            <div class="skill-category">
+              <h4>Machine Learning</h4>
+              <p>Classification, Clustering, Regression, Model Evaluation</p>
+            </div>
+            <div class="skill-category">
+              <h4>Development Tools</h4>
+              <p>Git, GitHub, VS Code, Jupyter Notebook</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Certifications & Achievements</h2>
+          <div class="certifications-list">
+            <div class="cert-item">
+              <h4>🏆 Champions – Data Odyssey 2025</h4>
+            </div>
+            <div class="cert-item">
+              <h4>📜 Microsoft Power Up Program – Certified Graduate</h4>
+            </div>
+            <div class="cert-item">
+              <h4>🏀 Basketball Coaching Level 1 Certification</h4>
+            </div>
+            <div class="cert-item">
+              <h4>🏅 Merit Certificate – Basketball, KDU</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Interests</h2>
+          <p style="font-size: 1rem; color: #4a4a4a;">
+            Data Science • Artificial Intelligence • Sports Analytics • Predictive Modeling • 
+            Machine Learning • Sustainable Development • Education & Mentorship • Basketball
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container px-2 px-md-0">
+        <div class="d-md-flex justify-content-between align-items-center py-3">
+          <h6 class="text-center text-md-start">
+            Copyright © 2025 Hussein Ziyard
+          </h6>
+          <div class="d-flex flex-column flex-md-row gap-1 gap-md-4 justify-content-center align-items-center">
+            <a href="https://www.linkedin.com/in/husseinziyard/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Husseinziyard" target="_blank">GitHub</a>
+            <a href="https://preply.in/HUSSEIN6EN3301501010?ts=17689284" target="_blank">Preply</a>
+            <a href="mailto:husseinziyard@gmail.com">husseinziyard@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
